@@ -1449,7 +1449,7 @@ app.extend({
 		
 		app.api.post( 'app/run_event', job, function(resp) {
 			// jump immediately to live job details page
-			app.showMessage('success', "Job started via keyboard shortcut.");
+			app.showMessage('success', "Job started via keyboard shortcut: " + event.title);
 			if (trigger.watch) Nav.go('Job?id=' + resp.id);
 		} ); // api.post
 	},
